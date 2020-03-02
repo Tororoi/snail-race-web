@@ -1,0 +1,19 @@
+<h1>Repaint the Snail's Shell</h1>
+
+<h3><%= @snail.name%></h3>
+<p><%= "Body: #{@snail.body.color}"%></p>
+
+<%= form_for @snail do |f|%>
+    <%= f.label :shell_id %>
+    <%= f.collection_select :shell_id, Shell.all, :id, :color %>
+
+    <%= f.submit%>
+<%end%>
+<br/>
+<%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+        <div id = "error">
+        <%= error%>
+        </div>
+    <%end%>
+<%end%>

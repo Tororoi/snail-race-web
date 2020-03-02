@@ -1,0 +1,20 @@
+<h1>Races</h1>
+
+<ol>
+<% @races.each do |race|%>
+    <li>
+    <%= "Number: #{race.number}"%>
+    <%= "Prize: #{race.prize.name}"%>
+    <p>Racers:</p>
+    <ol>
+    <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
+    <% ranks.each do |snail_race|%>
+        <li>
+            <%= "Name: #{snail_race.snail.name}" %>
+        </li>
+    <%end%>
+    </ol>
+    </li>
+    <br/>
+<%end%>
+</ol>

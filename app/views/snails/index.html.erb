@@ -1,0 +1,12 @@
+<h1>Snails</h1>
+
+<ol>
+<% @snails.each do |snail|%>
+    <li>
+    <%= "Name: #{snail.name}"%>
+    <%= "Shell: #{snail.shell.color}"%>
+    <%= "Body: #{snail.body.color}"%>
+    <%= "Favorite Food: #{snail.favorite_food}"%>
+    </li>
+<%end%>
+</ol>

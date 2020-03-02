@@ -1,0 +1,18 @@
+<h1>Create a New User</h1>
+
+<%= form_for @user do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.hidden_field :money, value: 100%>
+
+    <%= f.submit%>
+<%end%>
+<br/>
+<%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+        <div id = "error">
+        <%= error%>
+        </div>
+    <%end%>
+<%end%>

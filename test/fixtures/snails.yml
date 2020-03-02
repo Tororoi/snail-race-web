@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  shell: one
+  body: one
+  speed: 1.5
+  favorite_food: MyString
+
+two:
+  name: MyString
+  shell: two
+  body: two
+  speed: 1.5
+  favorite_food: MyString
