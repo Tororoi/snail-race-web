@@ -1,0 +1,28 @@
+<h1><div id = "login"> Login</h1>
+
+<div id = "er">
+    <%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+        <div id = "error">
+        <%= error%>
+        </div>
+    <%end%>
+<%end%>
+</div>
+<%= form_tag login_index_path, html: { class: "auth-form" } do %>
+  <ul>
+    <li>
+        <%= label_tag :name %>
+        <%= text_field_tag :name %>
+    </li>
+    <li>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+    </li>
+    <%= hidden_field_tag :money, value: 100%>
+    </ul>
+        <%= submit_tag "Login"%>
+
+
+<%  end %>
+

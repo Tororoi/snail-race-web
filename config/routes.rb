@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :snails
   resources :races, only: [:index, :new, :show, :create]
   resources :users, only: [:new, :show, :create, :destroy]
+  resources :login, only: [:new, :create]
   resources :bets, only: [:index, :show]
 
 end
