@@ -22,8 +22,11 @@
 
 <p>Start Race!</p>
 
+<% tfunc = ["linear", "linear", "ease-in", "ease-in", "ease-out", "ease-in-out"] %>
+<% stopwatch = (6.0..10.0)%>
+
 <div class="racer-one">
-    <div style="animation: racer-one 6s ease-in;">
+    <div style="animation: racer-one <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.first.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.first.snail.body.image, class: "body")%>
@@ -31,7 +34,7 @@
     </div>
 </div>
 <div class="racer-two">
-    <div style="animation: racer-two 8s ease-in-out;">
+    <div style="animation: racer-two <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.second.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.second.snail.body.image, class: "body")%>
@@ -39,7 +42,7 @@
     </div>
 </div>
 <div class="racer-three">
-    <div style="animation: racer-three 7s ease-out;">
+    <div style="animation: racer-three <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.third.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.third.snail.body.image, class: "body")%>
@@ -47,7 +50,7 @@
     </div>
 </div>
 <div class="racer-four">
-    <div style="animation: racer-four 10s;">
+    <div style="animation: racer-four <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.fourth.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.fourth.snail.body.image, class: "body")%>
