@@ -1,0 +1,18 @@
+<h1>Create a New Race!</h1>
+
+<%= form_for @race do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.hidden_field :prize_id, value: Prize.all.sample.id%>
+
+    <%= f.submit%>
+<%end%>
+<br/>
+<%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+        <div id = "error">
+        <%= error%>
+        </div>
+    <%end%>
+<%end%>

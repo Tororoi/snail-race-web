@@ -1,0 +1,60 @@
+<h1><%= @race.name %></h1>
+
+<h3>Racers:</h3>
+
+<ul>
+<% @race.snail_races.each do |snail_race|%>
+    <li>
+        <%= "Name: #{snail_race.snail.name}" %>
+        <%= form_for @bet do |f|%>
+            <%= f.hidden_field :snail_race_id, value: snail_race.id%>
+            <%= f.hidden_field :user_id, value: 1 %>
+
+            <%= f.label :amount, "Bet on #{snail_race.snail.name}" %>
+            <%= f.number_field :amount %>
+
+            <%= f.submit%>
+        <%end%>
+    </li>
+    <br/>
+<%end%>
+</ul>
+
+<p>Start Race!</p>
+
+<div class="racer-one">
+    <div style="animation: racer-one 6s ease-in;">
+        <div class="snail">
+        <%= image_tag(@race.snail_races.first.snail.shell.image, class: "shell")%>
+        <%= image_tag(@race.snail_races.first.snail.body.image, class: "body")%>
+        </div>
+    </div>
+</div>
+<div class="racer-two">
+    <div style="animation: racer-two 8s ease-in-out;">
+        <div class="snail">
+        <%= image_tag(@race.snail_races.second.snail.shell.image, class: "shell")%>
+        <%= image_tag(@race.snail_races.second.snail.body.image, class: "body")%>
+        </div>
+    </div>
+</div>
+<div class="racer-three">
+    <div style="animation: racer-three 7s ease-out;">
+        <div class="snail">
+        <%= image_tag(@race.snail_races.third.snail.shell.image, class: "shell")%>
+        <%= image_tag(@race.snail_races.third.snail.body.image, class: "body")%>
+        </div>
+    </div>
+</div>
+<div class="racer-four">
+    <div style="animation: racer-four 10s;">
+        <div class="snail">
+        <%= image_tag(@race.snail_races.fourth.snail.shell.image, class: "shell")%>
+        <%= image_tag(@race.snail_races.fourth.snail.body.image, class: "body")%>
+        </div>
+    </div>
+</div>
+
+<div class="prize">
+    <%= image_tag(@race.prize.image)%>
+</div>

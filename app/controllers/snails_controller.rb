@@ -13,6 +13,12 @@ class SnailsController < ApplicationController
         @foods = Prize.all
     end
 
+    def show
+        @snail_race = SnailRace.new
+        @snail_races = SnailRace.all
+        @races = Race.select {|race| race.snail_races.length < 4 && race.snails.exclude?(@snail)}
+    end
+
     def create
         @snail = Snail.create(snail_params)
         if @snail.valid?

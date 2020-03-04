@@ -6,6 +6,7 @@ class CreateSnails < ActiveRecord::Migration[6.0]
       t.belongs_to :body, null: false, foreign_key: true
       t.float :speed
       t.string :favorite_food
+      t.boolean :exists, default: true
 
       t.timestamps
     end

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :races, only: [:index, :new, :show, :create]
   resources :users, only: [:new, :show, :create, :destroy]
   resources :bets, only: [:index, :show]
-
+  resources :snail_races, only: [:create]
 end
