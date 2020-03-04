@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_160819) do
     t.integer "body_id", null: false
     t.float "speed"
     t.string "favorite_food"
+    t.boolean "exists", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["body_id"], name: "index_snails_on_body_id"

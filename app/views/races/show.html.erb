@@ -26,7 +26,7 @@
 <% stopwatch = (6.0..10.0)%>
 
 <div class="racer-one">
-    <div style="animation: racer-one <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
+    <div style="animation: racer-one <%=@race.snail_races.first.snail.favorite_food == @race.prize.name ? rand(stopwatch) - 1 : rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.first.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.first.snail.body.image, class: "body")%>
@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="racer-two">
-    <div style="animation: racer-two <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
+    <div style="animation: racer-two <%=@race.snail_races.second.snail.favorite_food == @race.prize.name ? rand(stopwatch) - 1 : rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.second.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.second.snail.body.image, class: "body")%>
@@ -42,7 +42,7 @@
     </div>
 </div>
 <div class="racer-three">
-    <div style="animation: racer-three <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
+    <div style="animation: racer-three <%=@race.snail_races.third.snail.favorite_food == @race.prize.name ? rand(stopwatch) - 1 : rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.third.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.third.snail.body.image, class: "body")%>
@@ -50,7 +50,7 @@
     </div>
 </div>
 <div class="racer-four">
-    <div style="animation: racer-four <%=rand(stopwatch)%>s <%=tfunc.sample%>;">
+    <div style="animation: racer-four <%=@race.snail_races.fourth.snail.favorite_food == @race.prize.name ? rand(stopwatch) - 1 : rand(stopwatch)%>s <%=tfunc.sample%>;">
         <div class="snail">
         <%= image_tag(@race.snail_races.fourth.snail.shell.image, class: "shell")%>
         <%= image_tag(@race.snail_races.fourth.snail.body.image, class: "body")%>
