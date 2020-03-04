@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    # skip_before_action :authenticate!
 
     before_action :find_user_by_id, only: [:show, :destroy]
 
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
             redirect_to @user
         else
             flash[:errors] = @user.errors.full_messages
-            redirect_to new_snail_path
+            redirect_to new_user_path
         end
     end
 
@@ -28,6 +29,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:name, :money)
+        params.require(:user).permit(:name, :money, :password)
     end
 end

@@ -1,18 +1,28 @@
-<h1>Create a New User</h1>
-
-<%= form_for @user do |f|%>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.hidden_field :money, value: 100%>
-
-    <%= f.submit%>
-<%end%>
-<br/>
-<%if flash[:errors]%>
+<div color = "color">
+    <h1>Sign up <%= link_to "Sign in", new_login_path %></h1>
+</div>
+<div id = "er">
+    <%if flash[:errors]%>
     <%flash[:errors].each do |error|%>
         <div id = "error">
         <%= error%>
         </div>
     <%end%>
 <%end%>
+</div>
+<%= form_for @user,  html: { class: "auth-form"} do |f|%>
+  <ul>
+    <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    </li>
+    <li>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    </li>
+    <%= f.hidden_field :money, value: 100%>
+    <%= f.submit "Login"%>
+    </ul>
+<%end%>
+
+<br/>
