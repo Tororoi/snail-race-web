@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :show, :create, :destroy]
   resources :login, only: [:new, :create]
   resources :bets, only: [:index, :show]
+  root :to => 'static#index' 
+
 
 end

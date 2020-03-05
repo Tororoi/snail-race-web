@@ -1,9 +1,9 @@
-<h1>Snails</h1>
+<h1 id = "snail_id">Snails</h1>
 
 <ol>
 <% @snails.each do |snail|%>
-    <li>
-    <%= "Name: #{snail.name}"%>
+    <li class = "snail_index">
+    <%= link_to "Name: #{snail.name}",snail %>
     <%= "Shell: #{snail.shell.color}"%>
     <%= "Body: #{snail.body.color}"%>
     <%= "Favorite Food: #{snail.favorite_food}"%>

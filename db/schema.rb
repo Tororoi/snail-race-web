@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_191741) do
+ActiveRecord::Schema.define(version: 2020_03_02_160819) do
 
   create_table "bets", force: :cascade do |t|
     t.integer "snail_race_id", null: false
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_191741) do
     t.string "favorite_food"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "exists", default: true
     t.index ["body_id"], name: "index_snails_on_body_id"
     t.index ["shell_id"], name: "index_snails_on_shell_id"
   end

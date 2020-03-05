@@ -11,11 +11,11 @@
 </div>
 <%= form_tag login_index_path, html: { class: "auth-form" } do %>
   <ul>
-    <li>
+    <li class = "login_move">
         <%= label_tag :name %>
         <%= text_field_tag :name %>
     </li>
-    <li>
+    <li class = "login_move">
         <%= label_tag :password %>
         <%= password_field_tag :password %>
     </li>
@@ -25,4 +25,6 @@
 
 
 <%  end %>
+
+
 
