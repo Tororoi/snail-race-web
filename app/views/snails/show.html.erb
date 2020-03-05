@@ -1,32 +1,41 @@
 <h1><%= @snail.name%></h1>
-<h3><%= @snail.favorite_food%></h3>
+<div class = "container-3">
 
-<div class="snail_whole">
-    <%= image_tag(@snail.shell.image, class: "shell")%>
-    <%= image_tag(@snail.body.image, class: "body")%>
+    <div class = "box-4">
+        <%# <div class="snail_whole"> %>
+        <%= image_tag(@snail.shell.image, class: "shell")%>
+        <%= image_tag(@snail.body.image, class: "body")%>
+      
+    </div>
+
+<div class = "box-3">
+    <h4 class = "snail_show"><%= @snail.favorite_food%></h4>
+    
+</div>
+    
 </div>
 
-<div>
-<h3>Races</h3>
+
+<h3 id = "race_color">Races</h3>
 <ul>
 <% @snail.races.each do |race|%>
-    <li>
+    <li id = "race_rank">
     <% rank = race.snail_races.find_by(snail_id: @snail.id).rank%>
     <% rank == nil ? rank = "TBD" : rank = rank%>
     <%= "#{race.name} rank: #{rank}"%>
     </li>
-<%end%>
+    <%end%>
 </ul>
+    </div>
 
 <%if @races.length != 0%>
-<%= form_for @snail_race do |f|%>
+<div class = "select">
+    <%= form_for @snail_race do |f|%>
     <%= f.hidden_field :snail_id, value: @snail.id%>
-    <%= f.collection_select :race_id, @races, :id, :name %>
-
-    <%= button_to "Register for this race", snail_races_path, method: :post%>
+    <%= f.collection_select :race_id, @races, :id, :name%>
+</div>
+    <%= button_to "Register for this race", snail_races_path, method: :post, class: "button"%>
 <%end%>
 <%else%>
 <%end%>
-
-<%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete %>
-</div>
+<%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete, class: "button_free" %>

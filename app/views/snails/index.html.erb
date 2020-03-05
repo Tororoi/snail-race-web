@@ -1,12 +1,24 @@
 <h1 id = "snail_id">Snails</h1>
-
-<ol>
 <% @snails.each do |snail|%>
-    <li class = "snail_index">
-    <%= link_to "Name: #{snail.name}",snail %>
-    <%= "Shell: #{snail.shell.color}"%>
-    <%= "Body: #{snail.body.color}"%>
+    <div class = "container-1">
+        <div class = "box-1">
+            <%= image_tag(snail.shell.image, class: "shell")%>
+            <%= image_tag(snail.body.image, class: "body")%>
+        </div>
+<div class = "box-2">
+    <%= link_to "Name: #{snail.name}",snail %><br>
+    <%= "Shell: #{snail.shell.color}"%><br>
+    <%= "Body: #{snail.body.color}"%><br>
     <%= "Favorite Food: #{snail.favorite_food}"%>
-    </li>
-<%end%>
-</ol>
+</div>
+</div>
+<%  end %>
+
+
+
+
+
+    
+
+
+
