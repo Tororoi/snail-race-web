@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :login, only: [:new, :create]
   resources :bets, only: [:index, :show]
   resources :snail_races, only: [:create]
+  root :to => 'static#index' 
+
+
 end
