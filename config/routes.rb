@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   resources :races, only: [:index, :new, :show, :create]
   resources :users, only: [:new, :show, :create, :destroy]
   resources :login, only: [:new, :create]
-  resources :bets, only: [:index, :show]
+  resources :bets, only: [:index, :show, :create, :destroy]
   resources :snail_races, only: [:create]
   root :to => 'static#index' 
 
+  get '/races/:id/run', to: 'races#run', as: 'run'
 
 end

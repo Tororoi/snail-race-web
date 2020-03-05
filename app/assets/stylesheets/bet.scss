@@ -1,3 +1,11 @@
 // Place all the styles related to the Bet controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.bets {
+    display: block;
+}
+
+.make_bet {
+    position: absolute;
+    left: 96px;
+}

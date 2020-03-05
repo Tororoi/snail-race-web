@@ -15,6 +15,14 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+    font-family: "Munro";
+    src: url(Munro-2LYe.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Pixel Typeface";
+    src: url(BIT.otf) format("truetype");
+}
 #error {
     color: red;
     list-style-type: none;
@@ -27,3 +35,7 @@
     margin: 10px auto;
 }
 
+body {
+    font-family: 'Pixel Typeface';
+    background-color: rgb(192, 223, 163);
+}

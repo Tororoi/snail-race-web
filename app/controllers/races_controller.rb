@@ -1,6 +1,6 @@
 class RacesController < ApplicationController
 
-    before_action :find_race_by_id, only: [:show]
+    before_action :find_race_by_id, only: [:show, :run]
 
     def index
         @races = Race.all
@@ -13,6 +13,7 @@ class RacesController < ApplicationController
 
     def show
         @bet = Bet.new
+        @bets = @race.bets.where(user_id: session[:user_id])
     end
 
     def create

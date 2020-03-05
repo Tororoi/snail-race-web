@@ -2,8 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1 {
+    margin: 16px;
     text-align: center;
+    font-size: 48px;
   }
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}  
 
 .auth-form {
     margin: auto;
@@ -27,11 +34,11 @@ h1 {
   }
 
   input{
-    font-family: 'Georgia', serif;
+    font-family: 'Pixel Typeface';
     display: block;
     width: 100%;
     margin: 10px 0 30px;
-    border-radius: 10px;
+    border-radius: 0px;
     border: 5px solid white;
     background: #bbb linear-gradient(#bbb,#ddd);
     outline: none;
@@ -44,11 +51,11 @@ h1 {
   }
   
   input[type=submit] {
-    background: #57b847 linear-gradient(#57b847,#57b847);
+    background: #508647 linear-gradient(#74e3ff,#519147);
     border-width: 0;
     width: auto;
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    margin: 50px auto;
+    font-family: 'Pixel Typeface';
+    margin: 0px auto;
     transition: box-shadow .5s;
   }
   input[type=submit]:focus,

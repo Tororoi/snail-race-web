@@ -28,55 +28,67 @@
 }
 
 .racer-one > div {
-    left: 1024px;
+    left: 0px;
     position: absolute;
-    top: 200px;
+    top: 170px;
     width: 96px;
     height: 96px;
     color: white;
 }
 @keyframes racer-one {
-    0% { left: 0; }
+    100% { left: 1024px; }
 }
 
 .racer-two > div {
-    left: 1024px;
+    left: 0px;
     position: absolute;
-    top: 260px;
+    top: 230px;
     width: 96px;
     height: 96px;
     color: white;
 }
 @keyframes racer-two {
-    0% { left: 0; }
+    100% { left: 1024px; }
 }
 
 .racer-three > div {
-    left: 1024px;
+    left: 0px;
     position: absolute;
-    top:320px;
+    top:290px;
     width: 96px;
     height: 96px;
     color: white;
 }
 @keyframes racer-three {
-    0% { left: 0; }
+    100% { left: 1024px; }
 }
 
 .racer-four > div {
-    left: 1024px;
+    left: 0px;
     position: absolute;
-    top: 380px;
+    top: 350px;
     width: 96px;
     height: 96px;
     color: white;
 }
 @keyframes racer-four {
-    0% { left: 0; }
+    100% { left: 1024px; }
 }
 
 .prize {
     left: 1100px;
-    top: 0px;
+    top: -30px;
     position: absolute;
   }
+
+.results {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    top: 300px;
+
+    animation: results 1s 18s forwards;
+}
+@keyframes results {
+    100% { opacity: 1}
+}
