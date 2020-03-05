@@ -34,3 +34,116 @@
     color: green; 
     padding: 10px;  
 }
+
+
+.snail_show{
+    color:#ed9121;
+    font-size: 25px;
+    position: absolute;
+    top: 90px
+}
+
+#race_color{
+    font-size: 40px;
+    position: absolute;
+    top: 200px;
+    left: 663px
+}
+
+#race_rank {
+    font-size: 20px;
+    margin: 5px;
+    position: relative;
+    top: 80px;
+    left: 520px;
+}
+
+.button {
+    font-size: 20px;
+    position: relative;
+    top: 0px;
+    right: 42px
+}
+
+.button_free{
+// float: left;
+position: absolute;
+bottom: 20px; 
+left: 550px
+
+
+}
+
+.select {
+    position: relative;
+    padding: 15px;
+    margin: 5px;    
+    top: 90px;
+    left: 450px;
+}
+
+
+
+
+
+.container-1{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.container-1 div {
+    border: 2px black solid;
+    padding: 10px;
+}
+
+.container-2{
+    display: flex;
+    position: relative;
+}
+
+.container-2 div {
+    border: 2px black solid;
+    padding: 10px;
+
+
+}
+.box-1{
+    width: 96px;
+    height: 96px;
+}
+
+
+
+.box-2{
+    width: 200px;
+    height: 96px;
+}
+
+
+
+
+
+.container-3 div {
+    border: 2px black solid;
+    padding: 20px;
+
+}
+
+.container-3{
+    display: flex;
+    justify-content: center;
+
+}
+
+.box-3{
+    width: 200px;
+    height: 96px;
+}
+
+.box-4{
+    width: 200px;
+    height: 96px;
+}
+
