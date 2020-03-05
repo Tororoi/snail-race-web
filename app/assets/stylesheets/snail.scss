@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.snail{
+.snail_whole{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -13,8 +13,10 @@
     position: absolute;
 }
 
-.body {
 
+.body {
+    position: absolute;
+    clip: rect(0, 96px, 96px, 0);
 }
 
 

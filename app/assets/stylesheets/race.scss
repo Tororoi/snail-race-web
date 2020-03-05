@@ -1,21 +1,34 @@
 // Place all the styles related to the Race controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-.racer > div {
-    left: 1024px;
-    position: absolute;
-    width: 96px;
-    height: 96px;
-    color: white;
+.snail,
+.shell, 
+.chug {
+  width: 96px;
+  height: 96px;
+  display: block;
 }
-@keyframes racer {
-    0% { left: 0; }
+.snail {
+  position: relative;
+}
+.chug {
+  position: absolute;
+}
+.chug img{
+  width: 96px;
+  height: 96px;
+  object-fit: none;
+  object-position: 0% 0%;
+}
+
+@keyframes chug {
+  100% {
+    object-position: -384px 0;
+  }
 }
 
 .racer-one > div {
     left: 1024px;
-    object-fit: none;
     position: absolute;
     top: 200px;
     width: 96px;
@@ -24,7 +37,6 @@
 }
 @keyframes racer-one {
     0% { left: 0; }
-    0% { object-position: 0px; }
 }
 
 .racer-two > div {
@@ -64,7 +76,7 @@
 }
 
 .prize {
-    left: 1400px;
+    left: 1100px;
     top: 0px;
     position: absolute;
   }
