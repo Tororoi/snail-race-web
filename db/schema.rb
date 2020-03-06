@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_03_02_160819) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bets", force: :cascade do |t|
-    t.integer "snail_race_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "snail_race_id", null: false
+    t.bigint "user_id", null: false
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_160819) do
 
   create_table "races", force: :cascade do |t|
     t.string "name"
-    t.integer "prize_id", null: false
+    t.bigint "prize_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["prize_id"], name: "index_races_on_prize_id"
@@ -52,8 +55,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_160819) do
   end
 
   create_table "snail_races", force: :cascade do |t|
-    t.integer "snail_id", null: false
-    t.integer "race_id", null: false
+    t.bigint "snail_id", null: false
+    t.bigint "race_id", null: false
     t.float "odds"
     t.integer "rank"
     t.datetime "created_at", precision: 6, null: false
@@ -64,8 +67,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_160819) do
 
   create_table "snails", force: :cascade do |t|
     t.string "name"
-    t.integer "shell_id", null: false
-    t.integer "body_id", null: false
+    t.bigint "shell_id", null: false
+    t.bigint "body_id", null: false
     t.float "speed"
     t.string "favorite_food"
     t.boolean "exists", default: true
