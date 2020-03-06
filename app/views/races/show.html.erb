@@ -14,7 +14,7 @@
             <%= f.hidden_field :snail_race_id, value: snail_race.id%>
             <%= f.hidden_field :user_id, value: session[:user_id] %>
              <%= f.hidden_field :amount, value: 1 %>
-
+    
             <%= f.submit "Bet #{Bet.where(user_id: session[:user_id], snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }} on #{snail_race.snail.name}" %>
         <%end%>
         

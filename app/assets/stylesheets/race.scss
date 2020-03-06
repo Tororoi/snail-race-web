@@ -92,3 +92,20 @@
 @keyframes results {
     100% { opacity: 1}
 }
+
+.stopwatch {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    top: 400px;
+
+}
+@keyframes results {
+    100% { opacity: 0}
+}
+
+.finish_line {
+    display: flex;
+    right: 800px;
+    top: 500px;
+}
