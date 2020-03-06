@@ -50,8 +50,8 @@ race_two = Race.create(name: "Second Race", prize_id: mushroom.id)
 race_three = Race.create(name: "Third Race", prize_id: carrot.id)
 race_four = Race.create(name: "Fourth Race", prize_id: strawberry.id)
 
-fika = User.create(name: "Fika", money: 20)
-tom = User.create(name: "Tom", money: 40)
+fika = User.create(name: "Fika", money: 100)
+tom = User.create(name: "Tom", money: 100, password: "password")
 
 SnailRace.create(snail_id: default.id, race_id: race_one.id, odds: 0.5, rank: 2)
 SnailRace.create(snail_id: blue_light.id, race_id: race_one.id, odds: 0.3, rank: 4)
