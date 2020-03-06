@@ -10,6 +10,19 @@
   </head>
 
   <body>
+        <div class="nav-bar">
+    <div class="nav-bar-menu">
+      <div class = "float_left"><%= link_to "Snail Racing", root_path%></div>
+        <div class = "float_left"><%= link_to "Bet On Race"%></div>
+          <div class = "float_left"><%= link_to "View Snails", snails_path%></div>
+            <div class = "float_left"><%= link_to "Create A New Snail", new_snail_path%></div>
+              <div class = "float_left"><%= link_to "View Races", races_path	%></div>
+                <div class = "float_left"><%= link_to "Create A New Race", new_race_path	%></div>
+                  <div class = "float_left"><%= link_to "View Money", user_path(session[:user_id]) if session[:user_id] != nil	%></div>
+  </div>
+<div class = "float_left" class = "sing_left"><%= link_to "Sign in", new_user_path%></div>
+</div>
     <%= yield %>
   </body>
 </html>
+

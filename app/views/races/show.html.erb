@@ -1,8 +1,7 @@
 <h1><%= @race.name %></h1>
-<h2><%= link_to "Start Race!", run_path(@race) %>
-<%= link_to "View Snails", snails_path %></h2>
+<h2><%= link_to "Start Race!", run_path(@race) %></h2>
 <div class="bets">
-<%lane = 170%>
+<%lane = 190%>
 
 <% @race.snail_races.each do |snail_race|%>
         <div class="snail_whole", style="top: <%=lane%>px;">
@@ -14,7 +13,7 @@
             <%= f.hidden_field :snail_race_id, value: snail_race.id%>
             <%= f.hidden_field :user_id, value: session[:user_id] %>
              <%= f.hidden_field :amount, value: 1 %>
-    
+
             <%= f.submit "Bet #{Bet.where(user_id: session[:user_id], snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }} on #{snail_race.snail.name}" %>
         <%end%>
         

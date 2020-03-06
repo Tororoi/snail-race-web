@@ -30,7 +30,7 @@
 .racer-one > div {
     left: 0px;
     position: absolute;
-    top: 170px;
+    top: 190px;
     width: 96px;
     height: 96px;
     color: white;
@@ -42,7 +42,7 @@
 .racer-two > div {
     left: 0px;
     position: absolute;
-    top: 230px;
+    top: 250px;
     width: 96px;
     height: 96px;
     color: white;
@@ -54,7 +54,7 @@
 .racer-three > div {
     left: 0px;
     position: absolute;
-    top:290px;
+    top:310px;
     width: 96px;
     height: 96px;
     color: white;
@@ -66,7 +66,7 @@
 .racer-four > div {
     left: 0px;
     position: absolute;
-    top: 350px;
+    top: 370px;
     width: 96px;
     height: 96px;
     color: white;
@@ -76,8 +76,9 @@
 }
 
 .prize {
-    left: 64px;
-    top: -232px;
+    left: 68px;
+    top: -76px;
+    z-index: 200;
     position: absolute;
   }
 
@@ -108,7 +109,7 @@
 .finish_line {
     position: absolute;
     left: 1036px;
-    top: 200px;
+    top: 220px;
     z-index: -20;
 }
 

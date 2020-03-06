@@ -1,4 +1,3 @@
-<h3><%= link_to "View Races", races_path %></h3>
 <h1><%= @snail.name%></h1>
 <div class = "container-3">
 
@@ -9,7 +8,7 @@
     </div>
 
 <div class = "box-3">
-    <h4 class = "snail_show"><%= @snail.favorite_food%></h4>
+    <h4 class = "snail_show"><%= image_tag(Prize.find_by(name: @snail.favorite_food).image)%></h4>
 </div>
 </div>
 

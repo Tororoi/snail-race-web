@@ -10,7 +10,7 @@
     <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
     <% ranks.each do |snail_race|%>
         <li>
-            <%= "Name: #{snail_race.snail.name}" %>
+            <%= "#{snail_race.rank}: #{snail_race.snail.name}" %>
         </li>
     <%end%>
     </ol>

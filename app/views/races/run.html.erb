@@ -3,14 +3,12 @@
 <% tfunc = ["linear", "linear", "ease-in", "ease-in", "ease-out", "ease-in-out"] %>
 <% delay = 1%>
 
-<%= link_to "View Snails", snails_path %>
-
 <div class='results'>
     <h1>
     <%= "#{@winner.snail.name} won" %>
     <br/>
     <%= "with a time of #{@ranks.first.round(3).to_s}s!"%>
-    <br/>
+    <br/><br/><br/><br/><br/><br/><br/>
     <%= "You won #{@payout} gold!" if @payout > 0%>
     <h1>
 </div>
