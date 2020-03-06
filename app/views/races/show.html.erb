@@ -11,10 +11,10 @@
         <div class="make_bet", style="top: <%=lane+32%>px;">
         <%= form_for @bet do |f|%>
             <%= f.hidden_field :snail_race_id, value: snail_race.id%>
-            <%= f.hidden_field :user_id, value: session[:user_id] %>
+            <%= f.hidden_field :user_id, value: 1 %>
              <%= f.hidden_field :amount, value: 1 %>
 
-            <%= f.submit "Bet #{Bet.where(user_id: session[:user_id], snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }} on #{snail_race.snail.name}" %>
+            <%= f.submit "Bet #{Bet.where(user_id: 1, snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }} on #{snail_race.snail.name}" %>
         <%end%>
         
         </div>
