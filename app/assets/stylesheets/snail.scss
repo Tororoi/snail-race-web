@@ -37,16 +37,16 @@
 
 
 .snail_show{
-    color:#ed9121;
+    color:#148d54;
     font-size: 25px;
     position: absolute;
-    top: 90px
+    top: 140px;
 }
 
 #race_color{
     font-size: 40px;
     position: absolute;
-    top: 200px;
+    top: 265px;
     left: 663px
 }
 
@@ -54,22 +54,22 @@
     font-size: 20px;
     margin: 5px;
     position: relative;
-    top: 80px;
-    left: 520px;
+    top: 0px;
+    left: 20px;
 }
 
 .button {
     font-size: 20px;
     position: relative;
     top: 0px;
-    right: 42px
+    right: 11px
 }
 
 .button_free{
 // float: left;
 position: absolute;
 bottom: 20px; 
-left: 550px
+left: 580px
 
 
 }
@@ -78,8 +78,8 @@ left: 550px
     position: relative;
     padding: 15px;
     margin: 5px;    
-    top: 90px;
-    left: 450px;
+    top: 0px;
+    left: 2px;
 }
 
 
@@ -146,4 +146,39 @@ left: 550px
     width: 200px;
     height: 96px;
 }
+.box-5{
+    width: 200px;
+    height: 96px;
+}
+
+.container-4 div {
+    border: 2px black solid;
+    padding: 20px;
+
+}
+
+.container-4{
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-5 div {
+    border: 2px black solid;
+    padding: 20px;
+
+}
+
+.container-5{
+    display: flex;
+    justify-content: center;
+
+}
+
+.box-6{
+    width: 200px;
+    height: 96px;
+}
+
+
 

@@ -5,18 +5,23 @@
         <%# <div class="snail_whole"> %>
         <%= image_tag(@snail.shell.image, class: "shell")%>
         <%= image_tag(@snail.body.image, class: "body")%>
-      
     </div>
 
 <div class = "box-3">
     <h4 class = "snail_show"><%= @snail.favorite_food%></h4>
-    
 </div>
-    
+</div>
+
+<div class = "container-4">
+    <div class = "box-5">
+        <h3 id = "race_color">Races</h3>
+    </div>
 </div>
 
 
-<h3 id = "race_color">Races</h3>
+<div class = "container-5">
+    <div class = "box-6">
+
 <ul>
 <% @snail.races.each do |race|%>
     <li id = "race_rank">
@@ -26,7 +31,7 @@
     </li>
     <%end%>
 </ul>
-    </div>
+
 
 <%if @races.length != 0%>
 <div class = "select">
@@ -34,8 +39,10 @@
     <%= f.hidden_field :snail_id, value: @snail.id%>
     <%= f.collection_select :race_id, @races, :id, :name%>
 </div>
-    <%= button_to "Register for this race", snail_races_path, method: :post, class: "button"%>
+<%= button_to "Register for this race", snail_races_path, method: :post, class: "button"%>
 <%end%>
 <%else%>
 <%end%>
+</div>
+</div>
 <%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete, class: "button_free" %>
