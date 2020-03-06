@@ -3,11 +3,15 @@
 <% tfunc = ["linear", "linear", "ease-in", "ease-in", "ease-out", "ease-in-out"] %>
 <% delay = 1%>
 
-
+<%= link_to "View Snails", snails_path %>
 
 <div class='results'>
     <h1>
-    <%= "You Won!" if @payout > 0%>
+    <%= "#{@winner.snail.name} won" %>
+    <br/>
+    <%= "with a time of #{@ranks.first.round(3).to_s}s!"%>
+    <br/>
+    <%= "You won #{@payout} gold!" if @payout > 0%>
     <h1>
 </div>
 
@@ -18,7 +22,6 @@
             <div class ="chug">
                 <%= image_tag(@lane_one.snail.body.image, style: "animation: chug #{@timers[0]/15}s #{delay}s steps(4) #{@timers[0].ceil};")%>
             </div>
-            <div class = stopwatch, style='animation: results 1s <%=@timers[0]%>s forwards;'><%=@timers[0]%></div>
         </div>
     </div>
 </div>

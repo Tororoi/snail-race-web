@@ -76,8 +76,8 @@
 }
 
 .prize {
-    left: 1100px;
-    top: -30px;
+    left: 64px;
+    top: -232px;
     position: absolute;
   }
 
@@ -87,10 +87,10 @@
     opacity: 0;
     top: 300px;
 
-    animation: results 1s 18s forwards;
+    animation: results 1s 16s forwards;
 }
 @keyframes results {
-    100% { opacity: 1}
+    1% { opacity: 1}
 }
 
 .stopwatch {
@@ -99,13 +99,19 @@
     opacity: 0;
     top: 400px;
 
+    animation: results 1s forwards;
 }
 @keyframes results {
-    100% { opacity: 0}
+    100% { opacity: 1}
 }
 
 .finish_line {
-    display: flex;
-    right: 800px;
-    top: 500px;
+    position: absolute;
+    left: 1036px;
+    top: 200px;
+    z-index: -20;
+}
+
+.nav {
+    position: absolute;
 }

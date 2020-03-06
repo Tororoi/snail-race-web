@@ -1,3 +1,4 @@
+<h3><%= link_to "View Races", races_path %></h3>
 <h1><%= @snail.name%></h1>
 <div class = "container-3">
 
@@ -37,12 +38,16 @@
 <div class = "select">
     <%= form_for @snail_race do |f|%>
     <%= f.hidden_field :snail_id, value: @snail.id%>
+    <%= f.label "Choose an available race:"%>
     <%= f.collection_select :race_id, @races, :id, :name%>
+    <%= button_to "Register for this race", snail_races_path, method: :post, class: "button"%>
 </div>
-<%= button_to "Register for this race", snail_races_path, method: :post, class: "button"%>
+
 <%end%>
 <%else%>
 <%end%>
 </div>
 </div>
+
 <%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete, class: "button_free" %>
+

@@ -48,6 +48,7 @@ mushroom = Prize.create(name: "Mushroom", image: "mushroom")
 race_one = Race.create(name: "First Race", prize_id: cabbage.id)
 race_two = Race.create(name: "Second Race", prize_id: mushroom.id)
 race_three = Race.create(name: "Third Race", prize_id: carrot.id)
+race_four = Race.create(name: "Fourth Race", prize_id: strawberry.id)
 
 fika = User.create(name: "Fika", money: 20)
 tom = User.create(name: "Tom", money: 40)
