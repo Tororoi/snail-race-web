@@ -10,8 +10,8 @@ SnailRace.destroy_all
 Snail.destroy_all
 Shell.destroy_all
 Body.destroy_all
-Prize.destroy_all
 Race.destroy_all
+Prize.destroy_all
 User.destroy_all
 
 
