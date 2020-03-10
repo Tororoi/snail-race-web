@@ -1,5 +1,27 @@
 <h1>Races</h1>
 
+<% up_races = @races.select{|race|race.snail_races.length < 4}%>
+<%= "Upcoming Races:"%>
+<ol>
+<% up_races.each do |race|%>
+    <li>
+    <%= link_to "Race: #{race.name}", race %><br/>
+    <%= "Prize: #{race.prize.name}"%>
+    <p>Racers:</p>
+    <ol>
+    <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
+    <% ranks.each do |snail_race|%>
+        <li>
+            <%= "#{snail_race.rank}: #{snail_race.snail.name}" %>
+        </li>
+    <%end%>
+    </ol>
+    </li>
+    <br/>
+    <br/>
+<%end%>
+</ol>
+
 <ol>
 <% @races.each do |race|%>
     <li>
