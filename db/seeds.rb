@@ -15,7 +15,7 @@ Prize.destroy_all
 User.destroy_all
 
 
-red_shell = Shell.create(color: "Red", image: "snail_shell_red.png.png")
+red_shell = Shell.create(color: "Red", image: "snail_shell_red.png")
 orange_shell = Shell.create(color: "Orange", image: "snail_shell_orange.png")
 yellow_shell = Shell.create(color: "Yellow", image: "snail_shell_yellow.png")
 green_shell = Shell.create(color: "Green", image: "snail_shell_green.png")
@@ -50,8 +50,8 @@ race_two = Race.create(name: "Second Race", prize_id: mushroom.id)
 race_three = Race.create(name: "Third Race", prize_id: carrot.id)
 race_four = Race.create(name: "Fourth Race", prize_id: strawberry.id)
 
-fika = User.create(name: "Fika", money: 100)
-tom = User.create(name: "Tom", money: 100, password: "password")
+# fika = User.create(name: "Fika", money: 100)
+# tom = User.create(name: "Tom", money: 100, password: "password")
 
 SnailRace.create(snail_id: default.id, race_id: race_one.id, odds: 0.5, rank: 2)
 SnailRace.create(snail_id: blue_light.id, race_id: race_one.id, odds: 0.3, rank: 4)

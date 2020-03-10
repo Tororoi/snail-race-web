@@ -25,13 +25,13 @@ class RacesController < ApplicationController
         @lane_four.update(rank: @ranks.index(@timers[3])+1)
         @winner = SnailRace.find_by(race_id: @race.id, rank: 1)
         @payout = @winner.bets.inject(0){|sum,x| sum + x.amount }*4
-        @payee = User.find(1) #session[:user_id])
+        @payee = User.find(session[:user_id])
         @payee.update(money: @payee.money+=@payout)
     end
 
     def show
         @bet = Bet.new
-        @bets = @race.bets.where(user_id: 1)#session[:user_id])
+        @bets = @race.bets.where(user_id: session[:user_id])
     end
 
     def create

@@ -5,9 +5,9 @@ class LoginController < ApplicationController
     end
   
     def create
-      user = User.find_by(name: params[:name])
-      if user && user.authenticate(params[:password]) 
-        session[:user_id] = user.id
+      @user = User.find_by(name: params[:name])
+      if @user && @user.authenticate(params[:password]) 
+        session[:user_id] = @user.id
         redirect_to new_snail_path
       else
         flash[:errors] = ["name or password did not match"]
