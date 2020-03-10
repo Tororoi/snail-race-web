@@ -48,5 +48,5 @@
 </div>
 </div>
 
-<%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete, class: "button_free" %>
+<%= button_to "Free Snail into the Garden", snail_path(@snail), method: :delete, class: "button_free" if @snail.races.length < 1%>
 

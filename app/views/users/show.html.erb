@@ -1,7 +1,14 @@
 <h1><%= @user.name%></h1>
 
-<p>
-<%= @user.money%>
-</p>
+<h3>
+<%= "Money: #{@user.money}"%>
+</h3>
 
-<%= button_to "Delete User", @user, method: :delete %>
+<h3>
+<%= "Bets:"%>
+<% @user.snail_races.uniq.each do |snail_race|%>
+    <br/><%="#{snail_race.snail.name} in #{snail_race.race.name}: #{Bet.where(user_id: session[:user_id], snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }}"%>
+<%end%>
+</h3>
+
+<% button_to "Delete User", @user, method: :delete %>

@@ -5,7 +5,7 @@ class BetsController < ApplicationController
     def create
         @bet = Bet.create(bet_params)
         @user = User.find(session[:user_id])
-        @user.update(money: 6)
+        @user.update(money: 60)
         if @bet.valid?
             redirect_to @bet.snail_race.race
         else
