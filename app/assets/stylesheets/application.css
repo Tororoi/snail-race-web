@@ -20,7 +20,7 @@
     src: url(Munro-2LYe.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Pixel Typeface";
+    font-family: "PixelTypeface";
     src: url(BIT.otf) format("truetype");
 }
 #error {
@@ -36,6 +36,6 @@
 }
 
 body {
-    font-family: 'Pixel Typeface';
+    font-family: 'PixelTypeface';
     background-color: rgb(192, 223, 163);
 }
