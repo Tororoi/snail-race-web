@@ -1,5 +1,6 @@
 <h1><%= @race.name %></h1>
 <h2><%= link_to "Start Race!", run_path(@race) if @race.snail_races.length == 4%></h2>
+<h2><%= "Requires 4 Racers to Start" if @race.snail_races.length != 4%></h2>
 <div class="bets">
 <%lane = 190%>
 
