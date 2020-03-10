@@ -3,7 +3,7 @@
 <ol>
 <% @races.each do |race|%>
     <li>
-    <%= link_to "Number: #{race.name}", race %>
+    <%= link_to "Race: #{race.name}", race %>
     <%= "Prize: #{race.prize.name}"%>
     <p>Racers:</p>
     <ol>
