@@ -8,7 +8,11 @@
 <%= "Bets:"%>
 <% @user.snail_races.uniq.each do |snail_race|%>
     <br/><%="#{snail_race.snail.name} in #{snail_race.race.name}: #{Bet.where(user_id: session[:user_id], snail_race_id: snail_race.id).inject(0){|sum,x| sum + x.amount }}"%>
+    <%if snail_race.rank == 1%>
+    <%= "Winnings: #{snail_race.bets.inject(0){|sum,x| sum + x.amount }*2}"%> 
+    <%end%>
 <%end%>
+
 </h3>
 
 <% button_to "Delete User", @user, method: :delete %>
