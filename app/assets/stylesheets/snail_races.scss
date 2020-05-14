@@ -1,3 +1,34 @@
 // Place all the styles related to the snail_races controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.race-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.race-container ol {
+    // width: 200px;
+    font-size: 20px;
+}
+
+.race-container h2 {
+    margin: 20px;
+}
+
+.new-race {
+    list-style-type: none;
+    counter-reset: elementcounter;
+    padding-left: 0;
+}
+
+.new-race li:before {
+    content: "Lane " counter(elementcounter) ": ";
+    counter-increment: elementcounter;
+}
+
+.old-race {
+    list-style-type: none;
+    counter-reset: elementcounter;
+    padding-left: 0;
+}

@@ -1,7 +1,7 @@
 class LoginController < ApplicationController
     # skip_before_action :authenticate!
 
-    def new
+    def index
     end
   
     def create
@@ -11,15 +11,15 @@ class LoginController < ApplicationController
         redirect_to new_snail_path
       else
         flash[:errors] = ["name or password did not match"]
-        redirect_to new_login_path
+        redirect_to login_index_path
       end
     end
   
-    # def destroy
+    def destroy
       
-    #   session[:user_id] = nil
-    #   flash[:notification] = "You have been logged tf out"
-    #   redirect_to new_login_path
-    # end
+      session[:user_id] = nil
+      flash[:notification] = "You have been logged out"
+      redirect_to login_index_path
+    end
 
 end

@@ -1,6 +1,5 @@
-<div color = "color">
-    <h1>Sign up <%= link_to "Sign in", new_login_path %></h1>
-</div>
+<h1><div id = "login">Register as a new user</h1>
+
 <div id = "er">
     <%if flash[:errors]%>
     <%flash[:errors].each do |error|%>
@@ -11,18 +10,16 @@
 <%end%>
 </div>
 <%= form_for @user,  html: { class: "auth-form"} do |f|%>
-  <ul>
-    <li>
+  <ul class = "login-container">
+    <li class = "login_move">
     <%= f.label :name %>
-    <%= f.text_field :name %><br>
+    <%= f.text_field :name %>
     </li>
-    <li>
+    <li class = "login_move">
     <%= f.label :password %>
     <%= f.password_field :password %>
     </li>
     <%= f.hidden_field :money, value: 100%>
-    <%= f.submit "Login"%>
+    <%= f.submit "Register"%>
     </ul>
 <%end%>
-
-<br/>

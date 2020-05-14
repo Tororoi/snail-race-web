@@ -1,43 +1,57 @@
 <h1>Races</h1>
-
-<% up_races = @races.select{|race|race.snail_races.length < 4}%>
-<%= "Upcoming Races:"%>
-<ol>
-<% up_races.each do |race|%>
-    <li>
-    <%= link_to "Race: #{race.name}", race %><br/>
-    <%= "Prize: #{race.prize.name}"%>
-    <p>Racers:</p>
+<div class = "race-container">
+    <% up_races = @races.select{|race|race.snail_races.length < 4}%>
+    <h2>Upcoming Races:</h2>
     <ol>
-    <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
-    <% ranks.each do |snail_race|%>
+    <% up_races.each do |race|%>
         <li>
-            <%= "#{snail_race.rank}: #{snail_race.snail.name}" %>
+        <%= link_to "Race: #{race.name}", race %><br/>
+        <%= "Prize: #{race.prize.name}"%>
+        <p>Racers:</p>
+        <ol class = "new-race">
+        <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
+        <% ranks.each do |snail_race|%>
+            <li>
+                <%= snail_race.snail.name %>
+            </li>
+        <%end%>
+        </ol>
         </li>
+        <br/>
+        <br/>
     <%end%>
     </ol>
-    </li>
-    <br/>
-    <br/>
-<%end%>
-</ol>
 
-<%= "All Races:"%>
-<ol>
-<% @races.each do |race|%>
-    <li>
-    <%= link_to "Race: #{race.name}", race %><br/>
-    <%= "Prize: #{race.prize.name}"%>
-    <p>Racers:</p>
+    <h2>All Races:</h2>
     <ol>
-    <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
-    <% ranks.each do |snail_race|%>
+    <% @races.each do |race|%>
         <li>
-            <%= "#{snail_race.rank}: #{snail_race.snail.name}" %>
+        <%= link_to "Race: #{race.name}", race %><br/>
+        <%= "Prize: #{race.prize.name}"%>
+        <p>Racers:</p>
+        <ol class = "old-race">
+        <% ranks = race.snail_races.sort_by {|sr| sr[:rank]}%>
+        <% ranks.each do |snail_race|%>
+            <% place = "Disqualified"%>
+            <%  case snail_race.rank
+                when 1
+                    place = "First"
+                when 2
+                    place = "Second"
+                when 3
+                    place = "Third"
+                when 4
+                    place = "Fourth"
+                else
+                    place = "Disqualified"
+                end %>
+            <li>
+                <%= "#{place}: #{snail_race.snail.name}" %>
+            </li>
+        <%end%>
+        </ol>
         </li>
+        <br/>
     <%end%>
     </ol>
-    </li>
-    <br/>
-<%end%>
-</ol>
+</div>
