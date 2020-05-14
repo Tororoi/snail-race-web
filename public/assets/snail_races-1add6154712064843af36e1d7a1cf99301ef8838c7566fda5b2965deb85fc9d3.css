@@ -1,0 +1,36 @@
+/* line 4, app/assets/stylesheets/snail_races.scss */
+.race-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 10, app/assets/stylesheets/snail_races.scss */
+.race-container ol {
+  font-size: 20px;
+}
+
+/* line 15, app/assets/stylesheets/snail_races.scss */
+.race-container h2 {
+  margin: 20px;
+}
+
+/* line 19, app/assets/stylesheets/snail_races.scss */
+.new-race {
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-left: 0;
+}
+
+/* line 25, app/assets/stylesheets/snail_races.scss */
+.new-race li:before {
+  content: "Lane " counter(elementcounter) ": ";
+  counter-increment: elementcounter;
+}
+
+/* line 30, app/assets/stylesheets/snail_races.scss */
+.old-race {
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-left: 0;
+}

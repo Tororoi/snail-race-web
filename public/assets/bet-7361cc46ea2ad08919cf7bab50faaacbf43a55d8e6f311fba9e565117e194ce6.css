@@ -1,0 +1,10 @@
+/* line 4, app/assets/stylesheets/bet.scss */
+.bets {
+  display: block;
+}
+
+/* line 8, app/assets/stylesheets/bet.scss */
+.make_bet {
+  position: absolute;
+  left: 96px;
+}

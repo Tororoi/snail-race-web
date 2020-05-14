@@ -1,0 +1,85 @@
+/* line 4, app/assets/stylesheets/user.scss */
+h1 {
+  margin: 16px;
+  text-align: center;
+  font-size: 48px;
+}
+
+/* line 10, app/assets/stylesheets/user.scss */
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+}
+
+/* line 16, app/assets/stylesheets/user.scss */
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+/* line 22, app/assets/stylesheets/user.scss */
+label {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+/* line 28, app/assets/stylesheets/user.scss */
+input {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+/* line 33, app/assets/stylesheets/user.scss */
+input {
+  font-family: 'Pixel Typeface';
+  display: block;
+  width: 100%;
+  margin: 10px 0 30px;
+  border-radius: 0px;
+  border: 5px solid white;
+  background: #bbb linear-gradient(#bbb, #ddd);
+  outline: none;
+  color: #555;
+  box-sizing: border-box;
+}
+
+/* line 46, app/assets/stylesheets/user.scss */
+input:focus {
+  border-color: #6699ff;
+}
+
+/* line 50, app/assets/stylesheets/user.scss */
+input[type=submit] {
+  background: #508647 linear-gradient(#74e3ff, #519147);
+  border-width: 0;
+  width: auto;
+  font-family: 'Pixel Typeface';
+  margin: 0px auto;
+  transition: box-shadow .5s;
+}
+
+/* line 58, app/assets/stylesheets/user.scss */
+input[type=submit]:focus,
+input[type=submit]:active {
+  box-shadow: 0 0 0 5px #6699ff;
+}
+
+/* line 63, app/assets/stylesheets/user.scss */
+#er {
+  text-align: center;
+}
+
+/* line 67, app/assets/stylesheets/user.scss */
+a {
+  color: #57b847;
+}
+
+/* line 72, app/assets/stylesheets/user.scss */
+.errors {
+  list-style-type: none;
+  border-color: #ff0000;
+  background-color: #ff000055;
+}

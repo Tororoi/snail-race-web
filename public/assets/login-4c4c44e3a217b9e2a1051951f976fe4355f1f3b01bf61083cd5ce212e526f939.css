@@ -1,0 +1,18 @@
+/* line 2, app/assets/stylesheets/login.scss */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 8, app/assets/stylesheets/login.scss */
+.login_move {
+  width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* line 14, app/assets/stylesheets/login.scss */
+.auth-form ul {
+  list-style-type: none;
+}

@@ -1,0 +1,49 @@
+/* line 1, app/assets/stylesheets/static.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, app/assets/stylesheets/static.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 10, app/assets/stylesheets/static.scss */
+.float_left {
+  float: left;
+  display: block;
+  color: green;
+  font-size: 25px;
+  padding: 20px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 20, app/assets/stylesheets/static.scss */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* line 30, app/assets/stylesheets/static.scss */
+.nav-bar-menu {
+  display: flex;
+}
+
+/* line 34, app/assets/stylesheets/static.scss */
+.bottom-image {
+  height: 50%;
+}
+
+/* line 39, app/assets/stylesheets/static.scss */
+.bottom-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
