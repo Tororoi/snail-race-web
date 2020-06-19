@@ -1,0 +1,147 @@
+/* line 4, app/assets/stylesheets/race.scss */
+.snail,
+.shell,
+.chug {
+  width: 96px;
+  height: 96px;
+  display: block;
+}
+
+/* line 11, app/assets/stylesheets/race.scss */
+.snail {
+  position: relative;
+}
+
+/* line 14, app/assets/stylesheets/race.scss */
+.chug {
+  position: absolute;
+}
+
+/* line 17, app/assets/stylesheets/race.scss */
+.chug img {
+  width: 96px;
+  height: 96px;
+  object-fit: none;
+  object-position: 0% 0%;
+}
+
+@keyframes chug {
+  100% {
+    object-position: -384px 0;
+  }
+}
+
+/* line 30, app/assets/stylesheets/race.scss */
+.racer-1 > div {
+  left: 0px;
+  position: absolute;
+  top: 190px;
+  width: 96px;
+  height: 96px;
+  color: white;
+}
+
+@keyframes racer-1 {
+  100% {
+    left: 1024px;
+  }
+}
+
+/* line 42, app/assets/stylesheets/race.scss */
+.racer-2 > div {
+  left: 0px;
+  position: absolute;
+  top: 250px;
+  width: 96px;
+  height: 96px;
+  color: white;
+}
+
+@keyframes racer-2 {
+  100% {
+    left: 1024px;
+  }
+}
+
+/* line 54, app/assets/stylesheets/race.scss */
+.racer-3 > div {
+  left: 0px;
+  position: absolute;
+  top: 310px;
+  width: 96px;
+  height: 96px;
+  color: white;
+}
+
+@keyframes racer-3 {
+  100% {
+    left: 1024px;
+  }
+}
+
+/* line 66, app/assets/stylesheets/race.scss */
+.racer-4 > div {
+  left: 0px;
+  position: absolute;
+  top: 370px;
+  width: 96px;
+  height: 96px;
+  color: white;
+}
+
+@keyframes racer-4 {
+  100% {
+    left: 1024px;
+  }
+}
+
+/* line 78, app/assets/stylesheets/race.scss */
+.prize {
+  left: 68px;
+  top: -76px;
+  z-index: 200;
+  position: absolute;
+}
+
+/* line 85, app/assets/stylesheets/race.scss */
+.results {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  top: 300px;
+  animation: results 1s 16s forwards;
+}
+
+@keyframes results {
+  1% {
+    opacity: 1;
+  }
+}
+
+/* line 97, app/assets/stylesheets/race.scss */
+.stopwatch {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  top: 400px;
+  animation: results 1s forwards;
+}
+
+@keyframes results {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 109, app/assets/stylesheets/race.scss */
+.finish_line {
+  position: absolute;
+  left: 1036px;
+  top: 220px;
+  z-index: -20;
+}
+
+/* line 116, app/assets/stylesheets/race.scss */
+.nav {
+  position: absolute;
+}
