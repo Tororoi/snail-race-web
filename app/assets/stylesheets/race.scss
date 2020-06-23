@@ -27,7 +27,7 @@
   }
 }
 
-.racer-1 > div {
+.racer-one > div {
     left: 0px;
     position: absolute;
     top: 190px;
@@ -35,11 +35,11 @@
     height: 96px;
     color: white;
 }
-@keyframes racer-1 {
+@keyframes racer-one {
     100% { left: 1024px; }
 }
 
-.racer-2 > div {
+.racer-two > div {
     left: 0px;
     position: absolute;
     top: 250px;
@@ -47,11 +47,11 @@
     height: 96px;
     color: white;
 }
-@keyframes racer-2 {
+@keyframes racer-two {
     100% { left: 1024px; }
 }
 
-.racer-3 > div {
+.racer-three > div {
     left: 0px;
     position: absolute;
     top:310px;
@@ -59,11 +59,11 @@
     height: 96px;
     color: white;
 }
-@keyframes racer-3 {
+@keyframes racer-three {
     100% { left: 1024px; }
 }
 
-.racer-4 > div {
+.racer-four > div {
     left: 0px;
     position: absolute;
     top: 370px;
@@ -71,7 +71,7 @@
     height: 96px;
     color: white;
 }
-@keyframes racer-4 {
+@keyframes racer-four {
     100% { left: 1024px; }
 }
 

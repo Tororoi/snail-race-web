@@ -60,7 +60,7 @@
 }
 
 /* line 30, app/assets/stylesheets/race.scss */
-.racer-1 > div {
+.racer-one > div {
   left: 0px;
   position: absolute;
   top: 190px;
@@ -69,14 +69,14 @@
   color: white;
 }
 
-@keyframes racer-1 {
+@keyframes racer-one {
   100% {
     left: 1024px;
   }
 }
 
 /* line 42, app/assets/stylesheets/race.scss */
-.racer-2 > div {
+.racer-two > div {
   left: 0px;
   position: absolute;
   top: 250px;
@@ -85,14 +85,14 @@
   color: white;
 }
 
-@keyframes racer-2 {
+@keyframes racer-two {
   100% {
     left: 1024px;
   }
 }
 
 /* line 54, app/assets/stylesheets/race.scss */
-.racer-3 > div {
+.racer-three > div {
   left: 0px;
   position: absolute;
   top: 310px;
@@ -101,14 +101,14 @@
   color: white;
 }
 
-@keyframes racer-3 {
+@keyframes racer-three {
   100% {
     left: 1024px;
   }
 }
 
 /* line 66, app/assets/stylesheets/race.scss */
-.racer-4 > div {
+.racer-four > div {
   left: 0px;
   position: absolute;
   top: 370px;
@@ -117,7 +117,7 @@
   color: white;
 }
 
-@keyframes racer-4 {
+@keyframes racer-four {
   100% {
     left: 1024px;
   }
